@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: lightseagreen () (to right, #ff7e5f, #feb47b); /* light grey */
+    font-family: 'Arial', sans-serif;
+}
+
+.calculator {
+    background-color:rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 2em;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: hwb(195 17% 29%); /* Light gray background */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    background-color: #ff6f61; /* Button background color */
+    color: white; /* Button text color */
+    font-size: 1.5em;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #ff4c3b; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+button:active {
+    transform: scale(0.95); /* Slightly shrink on press */
+}
+
+.zero {
+    grid-column: span 2; /* Make the '0' button wider */
+}
